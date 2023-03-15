@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
 </head>
 <body>
-$END$
+    <p th:text="${yoh}"/>
+    <h1 th:text="${hello}"/>
+    <h2 th:text="${week}"/>
+
+    <td>
+        <span th:if="${currentDayOfWeek == 'Friday'}">Det er fredag</span>
+        <span th:if="${currentDayOfWeek != 'Friday'}">Det er ikke fredag <p th:text="${currentDayOfWeek}"></p>.</span>
+    </td>
 </body>
 </html>
